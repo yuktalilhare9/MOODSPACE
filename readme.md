@@ -81,21 +81,21 @@ Help users understand their emotional trends
 
 MoodSpace provides:
 
-🗣️ Natural language emotional expression
-🤖 Empathetic AI responses
-📈 Mood tracking with graphs
-🔍 Insights into emotional patterns
-⚙️ Tech Stack
-🔹 Backend
-Python (Flask)
-🔹 Frontend
-HTML, CSS (calming lavender UI)
-🔹 Data Handling
-CSV-based storage
-🔹 Visualization
-Matplotlib
-🔹 AI Integration
-Local AI using Ollam
+*🗣️ Natural language emotional expression
+*🤖 Empathetic AI responses
+*📈 Mood tracking with graphs
+*🔍 Insights into emotional patterns
+*⚙️ Tech Stack
+*🔹 Backend
+*Python (Flask)
+*🔹 Frontend
+*HTML, CSS (calming lavender UI)
+*🔹 Data Handling
+*CSV-based storage
+*🔹 Visualization
+*Matplotlib
+*🔹 AI Integration
+*Local AI using Ollam
 ---
 
 ## ⚙️ Setup Instructions (Step-by-Step)
@@ -254,15 +254,15 @@ date,text,sentiment,score
 * Advanced emotional analysis
 ----
 ## 📊 **Output**
-📄 Stores emotional data in CSV
-📈 Generates dynamic mood graphs
-🤖 Displays AI responses in real-time
-🚧 Challenges Faced
-❌ API quota limitations → switched to local AI
-❌ CSV errors → fixed with proper initialization
-❌ Backend bugs → resolved via debugging
-❌ Graph issues → corrected data mapping
-❌ AI response issues → fixed dependencies
+*📄 Stores emotional data in CSV
+*📈 Generates dynamic mood graphs
+*🤖 Displays AI responses in real-time
+*🚧 Challenges Faced
+*❌ API quota limitations → switched to local AI
+*❌ CSV errors → fixed with proper initialization
+*❌ Backend bugs → resolved via debugging
+*❌ Graph issues → corrected data mapping
+*❌ AI response issues → fixed dependencies
 ---
 
 ## 🤝 Contribution
