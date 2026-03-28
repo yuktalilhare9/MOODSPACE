@@ -51,12 +51,12 @@ Mental health affects:
 🤝 Relationships
 🌱 Overall well-being
 
-MoodSpace aims to:
+MoodSpace **aims** to:
 
-Encourage emotional expression
-Reduce mental burden
-Help users understand their emotional trends
-💡 Solution
+> Encourage emotional expression
+> Reduce mental burden
+> Help users understand their emotional trends
+
 ---
 
 ## 🎯 Key Features
