@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MoodSpace</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #E6E6FA, #F3E8FF);
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-family: "Times New Roman", serif;
+            font-size: 36px;
+            color: #5A4FCF;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+
+        .chat-box {
+            height: 250px;
+            overflow-y: auto;
+            margin-bottom: 15px;
+        }
+
+        .user-msg {
+            text-align: right;
+            margin: 10px;
+            padding: 10px;
+            background: #D8B4FE;
+            border-radius: 15px;
+            display: inline-block;
+        }
+
+        .bot-msg {
+            text-align: left;
+            margin: 10px;
+            padding: 10px;
+            background: #F3F4F6;
+            border-radius: 15px;
+            display: inline-block;
+        }
+
+        form {
+            display: flex;
+            gap: 10px;
+        }
+
+        input {
+            flex: 1;
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px solid #ddd;
+            outline: none;
+        }
+
+        button {
+            padding: 12px 18px;
+            border: none;
+            background: #8B5CF6;
+            color: white;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #7C3AED;
+        }
+
+        .graph img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        .history {
+            font-size: 14px;
+        }
+
+        .history div {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .insight {
+            background: #F5F3FF;
+            padding: 15px;
+            border-radius: 15px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>MoodSpace 💜</h1>
+        <p>Your safe space. No judgment. Just understanding.</p>
+    </div>
+
+    <!-- CHAT SECTION -->
+    <div class="card">
+        <div class="chat-box">
+
+            {% if message %}
+                <div class="user-msg">{{ message }}</div>
+            {% endif %}
+
+            {% for line in response %}
+                <div class="bot-msg">{{ line }}</div>
+            {% endfor %}
+
+        </div>
+
+        <form method="POST">
+            <input type="text" name="mood" placeholder="How are you feeling today..." required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <!-- INSIGHT SECTION -->
+    <div class="card insight">
+        <h3>🧠 Mood Insight</h3>
+        <p>
+            Tracking your emotions helps you understand patterns over time.
+            Even small steps count. You're doing better than you think.
+        </p>
+    </div>
+
+    <!-- GRAPH -->
+    <div class="card graph">
+        <h3>📊 Your Mood Journey</h3>
+        {% if graph %}
+            <img src="{{ graph }}" alt="Mood Graph">
+        {% else %}
+            <p>No data yet. Start sharing your thoughts 💜</p>
+        {% endif %}
+    </div>
+
+    <!-- HISTORY -->
+    <div class="card history">
+        <h3>🕒 Recent Entries</h3>
+
+        {% for row in data.values %}
+            <div>{{ row[0] }} → {{ row[2] }}</div>
+        {% endfor %}
+
+    </div>
+
+</div>
+
+</body>
+</html>
