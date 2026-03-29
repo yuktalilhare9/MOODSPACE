@@ -75,8 +75,6 @@ MoodSpace **aims** to:
 * **HTML & CSS** — Frontend design
 * **Pandas** — Data handling
 * **Matplotlib** — Graph generation
-* **Requests** — API communication
-* **Ollama (LLaMA 3)** — Local AI for chat
 ---
 
 ## ⚙️ Setup Instructions (Step-by-Step)
@@ -100,25 +98,6 @@ Make sure Python is installed, then run:
 
 ```bash id="h8k2n1"
 pip install flask pandas matplotlib requests
-```
-
----
-
-### 3️⃣ Install and Run AI (Ollama)
-
-MoodSpace uses **local AI**, so no paid API is required.
-
-#### 👉 Install Ollama:
-
-Download from: https://ollama.com
-
-#### 👉 Run the AI model:
-
-```bash id="v2k9d4"
-ollama run llama3
-```
-
-⚠️ Keep this running in the background.
 
 ---
 
